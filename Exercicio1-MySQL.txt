@@ -1,0 +1,38 @@
+CREATE DATABASE db_rh; --criando o banco de dados do RH 
+
+
+---CRIAÇÃO DA TABELA FUNCIONÁRIOS
+USE db_rh;
+
+CREATE TABLE tb_funcionarios(
+	id BIGINT(5) AUTO_INCREMENT,
+    nome VARCHAR(20) NOT NULL, 
+    cpf BIGINT(5) NOT NULL,
+    cargo VARCHAR(20) NOT NULL,
+    salario DECIMAL(12,5) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+
+INSERT INTO tb_funcionarios(nome, cpf, cargo, Salario)
+	VALUES("Marcos", 12312312312, "Gerente", 4000.00)
+
+
+INSERT INTO tb_funcionarios(nome, cpf, cargo, Salario)
+	VALUES("Paulo", 32132132132, "Dev Jr", 1000.00)
+
+INSERT INTO tb_funcionarios(nome, cpf, cargo, Salario)
+	VALUES("Pedro", 32131111132, "Dev Sênior", 10000.00)
+
+INSERT INTO tb_funcionarios(nome, cpf, cargo, Salario)
+	VALUES("Gerson", 4213411432, "Tech lead", 20000.00)
+
+SELECT FROM tb_funcionarios where Salario > 2000
+
+SELECT FROM tb_funcionarios where Salario < 2000
+
+UPDATE tb_funcionarios 
+SET cargo = "Dev Sênior"
+WHERE id = 2
+
+

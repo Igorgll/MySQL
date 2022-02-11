@@ -1,0 +1,44 @@
+CREATE DATABASE db_estoque;
+
+USE db_estoque; 
+
+CREATE TABLE tb_produtos(
+	id BIGINT(8)AUTO_INCREMENT, 
+    marca VARCHAR(20) NOT NULL,
+    tamanho CHAR(1) NOT NULL, 
+    tecido VARCHAR(20) NOT NULL,
+    preco DECIMAL(15 ,2) NOT NULL, 
+    PRIMARY KEY(id)
+);
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Nike", "M", "Camiseta", 49.90)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Adidas", "P", "Camiseta", 39.90)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Puma", "G", "Camiseta", 49.90)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Lacoste", "M", "Camiseta", 150.00)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Nike", "M", "Shorts", 39.90)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Adidas", "P", "Blusa Moletom", 100.00)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("Puma", "G", "Shorts", 29.90)
+
+INSERT INTO tb_produtos(marca, tamanho, produto, preco)
+	VALUES("C&A", "P", "Calça", 80.00)    
+
+SELECT preco FROM tb_produtos WHERE preco > 500
+
+SELECT preco FROM tb_produtos WHERE preco < 500
+
+UPDATE tb_produtos
+SET preco = 800.00
+WHERE id = 6

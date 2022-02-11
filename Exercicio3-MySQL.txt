@@ -1,0 +1,42 @@
+CREATE DATABASE db_escola;
+
+CREATE TABLE tb_notas (
+id bigint (8) AUTO_INCREMENT,
+nome VARCHAR(20) NOT NULL, 
+serie VARCHAR(20) NOT NULL, 
+materia VARCHAR(20) NOT NULL,
+nota DECIMAL(2, 1) NOT NULL,
+PRIMARY KEY(id)
+); 
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Pedro", "Oitavo ano", "Matemática", 8.0)
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Gabriel", "Oitavo ano", "Matemática", 6.0)
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("José", "Primeiro ano", "Literatura", 5.0) 
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Mario", "Segundo ano", "História", 9.0) 
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Gerson", "Segundo ano", "Matemática", 4.0) 
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Robson", "Segundo ano", "Matemática", 2.0)
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Roger", "Primeiro ano", "Filosofia", 9.5)
+
+INSERT INTO tb_notas(nome, serie, materia, nota)
+	VALUES("Leonardo", "Sétimo ano", "Português", 9.0) 
+
+SELECT nota FROM tb_notas WHERE nota > 7
+
+SELECT nota FROM tb_notas WHERE nota < 7
+
+UPDATE tb_notas 
+SET nome = "Gabriel" 
+WHERE id = 2
